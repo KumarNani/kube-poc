@@ -21,7 +21,7 @@ pipeline {
 					container(name: 'maven', shell: '/bin/bash') {
 						git branch: '${gitbranch}',
 						credentialsId: 'githublogin',
-						url: 'https://github.com/KumarNani/kube-poc.git'
+						url: 'https://github.com/KumarNani/kube-poc'
 							  
 				
 			}               
