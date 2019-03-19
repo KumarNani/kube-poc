@@ -6,7 +6,7 @@ pipeline {
 		choice choices: ['promote', 'rollback','build'], description: 'Task to do', name: 'task'
 		choice choices: ['prod', 'dev','na', 'stag'], description: 'Environment for Deploy the App', name: 'environment'
 		string (defaultValue: "00", description: 'Deployment Version applicable for promote job only', name: 'version')
-		choice choices: ['master', 'dev'], description: 'git branchname', name: 'gitbranch'
+		choice choices: ['dev', 'cicd-poc'], description: 'git branchname', name: 'gitbranch'
 	}
 
   stages {
