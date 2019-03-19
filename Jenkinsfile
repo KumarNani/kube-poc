@@ -1,6 +1,6 @@
 pipeline {
 	agent {
-	  label "kube-slave"
+	  label "kube-node"
 	}
 	parameters {
 		choice choices: ['promote', 'rollback','build'], description: 'Task to do', name: 'task'
@@ -121,6 +121,6 @@ pipeline {
 				}
 			}
 		}
-		
+
 	}
 }
