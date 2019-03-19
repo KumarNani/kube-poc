@@ -79,7 +79,7 @@ pipeline {
 					sh 'docker push gcr.io/cicd-demo1/hello-docker:${BUILD_NUMBER}'
 					//deploy the newly created image to dev environment
 					sh 'sed -i s/hello-docker:10/hello-docker:${BUILD_NUMBER}/g application.yaml'
-					sh 'kubectl apply -f application.yaml -n dev'
+					sh 'kubectl apply -f application.yaml -n hwdevns'
 				}
 			}
 		}
